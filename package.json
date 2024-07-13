@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sarveshsinghthakur.github.io/NewsLoop",
   "name": "newsloop",
   "version": "0.1.0",
   "private": true,
@@ -15,6 +16,8 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.12.1"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
