@@ -9,8 +9,8 @@ const Archive = ({ props }) => {
     await axios
       .get(
         props
-          ? `https://newsapi.org/v2/top-headlines?country=in&category=${props}&apiKey=${process.env.API_KEY}`
-          : `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.API_KEY}`
+          ? `https://newsapi.org/v2/top-headlines?country=in&category=${props}&apiKey=4550b45a006d426794ff83e85655b9fd`
+          : `https://newsapi.org/v2/top-headlines?country=in&apiKey=4550b45a006d426794ff83e85655b9fd`
       )
       .then((res) => setData(res.data.articles));
   };
