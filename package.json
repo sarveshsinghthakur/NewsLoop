@@ -1,6 +1,7 @@
 {
   "name": "newsloop",
   "version": "0.1.0",
+  "proxy": "https://newsapi.org",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.12.1",
