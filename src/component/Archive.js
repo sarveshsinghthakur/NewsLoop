@@ -12,7 +12,9 @@ const Archive = ({ props }) => {
           ? `https://newsapi.org/v2/top-headlines?country=in&category=${props}&apiKey=${process.env.API_KEY}`
           : `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.API_KEY}`
       )
+      
       .then((res) => setData(res.data.articles));
+    console.log(process.env.API_KEY);
   };
 
   useEffect(() => {
