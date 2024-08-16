@@ -15,10 +15,10 @@ const Archive = ({ props }) => {
       }
 
       const url = props
-        ? `https://newsapi.org/v2/top-headlines?country=in&category=${props}&apiKey=${apiKey}`
-        : `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
+        ? `https://newsdata.io/api/1/latest?apikey=pub_510304c0e2754154a655b0e9b15894b46f77f&q=${props}`
+        : `https://newsdata.io/api/1/latest?apikey=pub_510304c0e2754154a655b0e9b15894b46f77f`;
 
-      console.log("Fetching data from:", url);
+      
 
       const response = await axios.get(url);
       setData(response.data.articles);
@@ -75,7 +75,7 @@ const Archive = ({ props }) => {
               <h4>{items.title}</h4>
               <div className="d-flex justify-content-center align-items-center">
                 <img
-                  src={items.urlToImage}
+                  src={items.image_url}
                   alt="news"
                   className="img-fluid"
                   style={{
@@ -87,11 +87,13 @@ const Archive = ({ props }) => {
                   }}
                 />
               </div>
-              <h5>{items.author}</h5>
+              <h5>{items.creator}</h5>
               <p>{items.description}</p>
               <h6>{items.content}</h6>
+<br>
+<h7>{items.source_name}</h7>
               <a
-                href={items.url}
+                href={items.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
