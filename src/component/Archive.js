@@ -90,7 +90,7 @@ const Archive = ({ props }) => {
               <h5>{items.creator}</h5>
               <p>{items.description}</p>
               <h6>{items.content}</h6>
-<br>
+
 <h7>{items.source_name}</h7>
               <a
                 href={items.link}
