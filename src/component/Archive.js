@@ -9,10 +9,7 @@ const Archive = ({ props }) => {
 
   const fetchdata = async () => {
     try {
-      const apiKey = process.env.REACT_APP_API_KEY;
-      if (!apiKey) {
-        throw new Error("API key is missing");
-      }
+      
 
       const url = props
         ? `https://newsdata.io/api/1/latest?apikey=pub_510304c0e2754154a655b0e9b15894b46f77f&q=${props}`
@@ -90,8 +87,7 @@ const Archive = ({ props }) => {
               <h5>{items.creator}</h5>
               <p>{items.description}</p>
               <h6>{items.content}</h6>
-
-<h7>{items.source_name}</h7>
+              <h7>{items.source_name}</h7>
               <a
                 href={items.link}
                 target="_blank"
